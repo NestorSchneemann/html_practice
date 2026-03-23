@@ -7,16 +7,19 @@
 
     <style>
 
+        * {font-size: 12px;}
+
         body {
-            font-family: 'Times New Roman', Times, serif;
-            background: #f4f4f4;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            background: #AD4394;
         }
 
         form{
-            width: 350px;
+            width: 400px;
             margin: 50px auto;
-            padding: 20px;
-            background: wheat;
+            padding: 30px;
+            padding-bottom: 10px;
+            background: white;
             border-radius: 10px;
             box-shadow: 0 0 10px #333;
         }
@@ -25,9 +28,10 @@
             width: 93%;
             padding: 8px;
             margin: 5px 0 15px;
-            border: 1px solid #ccc;
+            border: 1px solid #AD4394;
             border-radius: 6px;
-            box-shadow: 0 0 6px #333;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 10px;
         }
 
         button{
@@ -35,10 +39,11 @@
             padding: 7px;
             border: none;
             border-radius: 5px;
-            background: #333;
-            color: rgba(214, 187, 187, 0.836);
+            background:#AD4394;
+            color:white;
             cursor: cell;
             box-shadow: 0 10px 15px aliceblue;
+            margin-top: 15px;
         }
 
         button:hover{
@@ -47,6 +52,25 @@
 
         h2{
             text-align: center;
+            font-size: 30px;
+            font-weight: bolder;
+            color:#AD4394;
+        }
+        
+        .descripcion{
+            font-size: 13.5px;
+            margin-bottom: 35px;
+            margin-top: 40px;
+        }
+
+        .final{
+            margin-bottom: 15px;
+            margin-top: 20px;
+            font-size: 11px;
+        }
+
+        .obligatorio{
+            color: #AD4394;
         }
         
     </style>
@@ -57,13 +81,30 @@
 
     <form>
         <h2>Formulario de contacto</h2>
-        <label>Nombre:</label><br>
-        <input type="text"><br><br>
 
-        <label>Email:</label><br>
-        <input type="text"><br><br>
+        <p class="descripcion">Escríbenos y en breve nos pondremos en contacto contigo</p>
 
-        <button type="submit">Enviar</button>
+        <label>Nombre <span class="obligatorio">*</span></label><br>
+        <input type="text" placeholder="Escribe tu nombre"><br><br>
+
+        <label>Email <span class="obligatorio">*</span></label><br>
+        <input type="text" placeholder="Escribe tu Email"><br><br>
+
+        <label>Teléfono</label><br>
+        <input type="text" placeholder="Escribe tu teléfono"><br><br>
+
+        <label>Sitio Web</label><br>
+        <input type="text" placeholder="Escribe la URL de tu web"><br><br>
+
+        <label>Asunto <span class="obligatorio">*</span></label><br>
+        <input type="text" placeholder="Escribe un asunto"><br><br>
+
+        <label>Mensaje <span class="obligatorio">*</span></label><br>
+        <textarea placeholder="Deja aquí tu comentario..." rows="8"></textarea>
+
+        <button type="submit">ENVIAR</button>
+
+        <p class="final"> <span class="obligatorio">*</span> los campos son obligatorios.</p>
     </form>
 </body>
 </html>
