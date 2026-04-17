@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    padding: 10px;
+}
+
+nav{
+    background-color: black;
+    color: gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+nav img{
+    width: 30px;
+    height: 30px;
+    background-color: white;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+}
+
+nav ul li{
+    display: flex;
+    align-items: center;
+    margin: 0 15px;
+}
+
+nav ul li a{
+    color: white;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav ul li a:hover{
+    color: gray;
+}
+
+.botones_header{
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.botones_header input{
+    width: 250px;
+    border: solid white 1px;
+    padding: 8px;
+    font-size: 14px;
+    background-color: rgb(59, 59, 59);
+    color: white;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.botones_header input::placeholder{
+    color: white;
+}
+
+.botones_header .boton_sin_borde{
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 14px;
+    margin-right: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.botones_header .boton_sin_borde:hover{
+    color: gray;
+}
+
+.botones_header .boton_negro{
+    background-color: black;
+    color: white;
+    border: white solid 1px;
+    border-radius: 5px;
+    padding: 8px 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.botones_header .boton_negro:hover{
+    color: gray;
+    border-color: gray;
+}
+
+
+main{
+    background-color: rgb(15, 5, 44);
+    padding: 100px;
+}
+
+main .titulo{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    color: white;
+    font-weight: lighter;
+    margin-top: 60px;
+}
+
+main .titulo h1{
+    font-size: 40px;
+    margin: 25px;
+}
+
+main .titulo p{
+    font-size: 16px;
+    margin: 10px;
+}
+
+main .botones{
+    display: flex;
+    justify-content: center;
+}
+
+main .botones .searching_wrapper{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    background: white;
+    width: 400px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 5px;
+    margin-right: 12px;
+}
+
+main .searching_wrapper input{
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+}
+
+main .searching_wrapper button{
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+main .searching_wrapper button:hover{
+    background-color: darkgreen;
+}
+
+main .botones .boton_azul{
+    height: 42px;
+    background-color: rgb(15, 5, 44);
+    color: white;
+    border: white solid 1px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+main .botones .boton_azul:hover{
+    border: rgb(87, 87, 87) solid 1px;
+}
+
+main .imagen{
+    display: flex;
+    justify-content: center;
+}
+
+main .imagen img{
+    width: 1000px;
+    height: auto;
+    border: rgba(216, 163, 252, 0.356) solid 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 140px rgba(178, 145, 204, 0.568);
+}
+
+footer{
+    background-color: rgb(31, 30, 30);
+    color: gray;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    font-size: 14px;
+}
+
+footer thead th{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+footer tbody tr td{
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 15px;
+    padding-right: 70px;
+}
+
+footer tbody tr td a{
+    color: gray;
+    text-decoration: none;
+}
+
+footer tbody tr td a:hover{
+    color: lightblue;
+    text-decoration: underline  ;
+}
