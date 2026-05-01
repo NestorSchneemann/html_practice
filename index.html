@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce home</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- HEADER-->
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">Miecommerce</div>
+            <button class="burger" id="burger" type="button" aria-label="Abrir menú" aria-controls="nav-links" aria-expanded="false"> <!-- aria-expanded es un atributo HTML (ARIA) de accesibilidad.-->
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#opiniones">Opiniones</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- BANNER SLIDER-->
+    <main id="home">
+        <section class="slider" aria-label="Promociones">
+            <div class="slides" id="slides">
+
+                <article class="slide is-active js-slide" aria-hidden="false">
+                    <img
+                        class="slide-img"
+                        alt="Promo: Envío gratis"
+                        src="images/banner-1.jpg"
+                    />
+                    <div class="slide-content">
+                        <h1>Envío gratis</h1>
+                        <p>En compras desde $30. Solo por tiempo limitado.</p>
+                        <a class="btn" href="#productos">Ver productos</a>
+                    </div>
+                </article>
+
+                <article class="slide js-slide" aria-hidden="true">
+                    <img
+                        class="slide-img"
+                        alt="Promo: 2x1 en básicos"
+                        src="images/banner-2.webp"
+                    />
+                    <div class="slide-content">
+                        <h2>2x1 en básicos</h2>
+                        <p>Agrega 2 al carrito y paga 1.</p>
+                        <a class="btn" href="#productos">Aprovechar</a>
+                    </div>
+                </article>
+
+                <article class="slide js-slide" aria-hidden="true">
+                    <img
+                        class="slide-img"
+                        alt="Promo: Descuentos de temporada"
+                        src="images/banner-3.jpg"
+                    />
+                    <div class="slide-content">
+                        <h2>Hasta 40% OFF</h2>
+                        <p>Descuentos de temporada en seleccionados.</p>
+                        <a class="btn" href="#productos">Comprar ahora</a>
+                    </div>
+                </article>
+            </div>
+
+
+            Botones del slider (opcional).
+            - Para activarlos: descomenta este bloque y también el bloque "Slider buttons" en `script.js`.
+            <button class="slider-btn slider-btn-prev" type="button" aria-label="Banner anterior">‹</button>
+            <button class="slider-btn slider-btn-next" type="button" aria-label="Siguiente banner">›</button>
+
+
+            <div class="dots" id="slider-dots" aria-label="Controles del slider">
+                <!-- Puntitos (manual): 1 por cada banner -->
+                <button class="dot is-active" type="button" aria-label="Ir al banner 1"></button>
+                <button class="dot" type="button" aria-label="Ir al banner 2"></button>
+                <button class="dot" type="button" aria-label="Ir al banner 3"></button>
+
+                <!--
+                MODO AUTOMÁTICO (DOTS CON JS) - ANTERIOR (comentado)
+                Si quieres que JS cree los puntitos solo:
+                1) Borra/COMENTA los 3 <button class="dot"> de arriba (modo manual)
+                2) Deja este <div> vacío (solo el contenedor)
+                3) En `script.js` descomenta el bloque "MODO AUTOMÁTICO (DOTS CON JS) - ANTERIOR"
+
+                Ejemplo de cómo debe quedar este contenedor (vacío):
+                <div class="dots" id="slider-dots" aria-label="Controles del slider"></div>
+                -->
+            </div>
+        </section>
+
+        <!-- PRODUCTOS -->
+        <section class="section" id="productos" aria-label="Productos destacados">
+            <div class="container">
+                <h2 class="section-title">Productos destacados</h2>
+                <p class="section-subtitle">Calidad, precio y envío rápido.</p>
+
+                <div class="product-grid">
+                    <article class="product-card">
+                        <img class="product-img" alt="Audífonos inalámbricos" src="images/audifonos.jpg">
+                        <div class="product-body">
+                            <h3 class="product-title">Audífonos inalámbricos</h3>
+                            <p class="product-desc">Sonido claro, batería 20h y estuche de carga.</p>
+                            <div class="product-row">
+                                <span class="price">$29.99</span>
+                                <button class="btn btn-outline" type="button">Agregar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!--<article> es una etiqueta HTML semántica.
+
+                            Qué es: un “bloque” que representa un contenido independiente que podría entenderse por sí solo.
+                            Qué hace: visualmente no hace nada especial por defecto (se comporta como un div), pero ayuda a:
+                            organizar el HTML con sentido,
+                            mejorar accesibilidad/SEO,
+                            hacer el código más claro. -->
+
+                    <article class="product-card">
+                        <img class="product-img" alt="Smartwatch deportivo" src="images/omnitrix.jpg">
+                        <div class="product-body">
+                            <h3 class="product-title">Smartwatch deportivo</h3>
+                            <p class="product-desc">Notificaciones, pasos, sueño y resistencia al agua.</p>
+                            <div class="product-row">
+                                <span class="price">$39.99</span>
+                                <button class="btn btn-outline" type="button">Agregar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <img class="product-img" alt="Mochila urbana" src="images/mochila.webp">
+                        <div class="product-body">
+                            <h3 class="product-title">Mochila urbana</h3>
+                            <p class="product-desc">Liviana, resistente y con bolsillo para laptop.</p>
+                            <div class="product-row">
+                                <span class="price">$24.99</span>
+                                <button class="btn btn-outline" type="button">Agregar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <img class="product-img" alt="Botella térmica" src="images/termo.webp">
+                        <div class="product-body">
+                            <h3 class="product-title">Botella térmica</h3>
+                            <p class="product-desc">Mantiene frío/caliente por horas. 500ml.</p>
+                            <div class="product-row">
+                                <span class="price">$14.99</span>
+                                <button class="btn btn-outline" type="button">Agregar</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- OPINIONES -->
+        <section class="section section-muted" id="opiniones" aria-label="Opiniones de clientes">
+            <div class="container">
+                <h2 class="section-title">Opiniones</h2>
+                <p class="section-subtitle">Lo que dicen nuestros clientes.</p>
+
+                <div class="review-grid">
+                    <article class="review-card">
+                        <div class="stars" aria-label="5 de 5">★★★★★</div> <!-- estrellitas se consiguen  en intenet -->
+                        <p class="review-text">“Llegó rápido y el producto tal cual las fotos. Recomendado.”</p>
+                        <div class="review-author">— Camila R.</div>
+                    </article>
+                    <article class="review-card">
+                        <div class="stars" aria-label="5 de 5">★★★★★</div>
+                        <p class="review-text">“Muy buena atención. El cambio de talla fue súper fácil.”</p>
+                        <div class="review-author">— Andrés M.</div>
+                    </article>
+                    <article class="review-card">
+                        <div class="stars" aria-label="4 de 5">★★★★☆</div>
+                        <p class="review-text">“Buen precio y calidad. El empaque llegó impecable.”</p>
+                        <div class="review-author">— Laura G.</div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACTO -->
+        <section class="section" id="contacto" aria-label="Contacto">
+            <div class="container contact">
+                <div>
+                    <h2 class="section-title">Contacto</h2>
+                    <p class="section-subtitle">Escríbenos y te respondemos pronto.</p>
+                    <ul class="contact-list">
+                        <li><strong>Correo:</strong> soporte@miecommerce.com</li>
+                        <li><strong>WhatsApp:</strong> +57 300 000 0000</li>
+                        <li><strong>Horario:</strong> Lun Sáb 9:00 18:00</li>
+                    </ul>
+                </div>
+                <form class="contact-form">
+                    <label>
+                        Nombre
+                        <input type="text" placeholder="Tu nombre" />
+                    </label>
+                    <label>
+                        Mensaje
+                        <textarea rows="4" placeholder="¿En qué te ayudamos?"></textarea>
+                    </label>
+                    <button class="btn" type="button">Enviar</button>
+                    <small class="hint">Demo: este formulario no envía nada.</small>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" aria-label="Pie de página">
+        <div class="container footer-grid">
+            <div>
+                <div class="footer-logo">Miecommerce</div>
+                <p class="footer-text">Tu tienda online de confianza: productos útiles, precios claros y soporte cercano.</p>
+            </div>
+            <div>
+                <h3 class="footer-title">Empresa</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#opiniones">Opiniones</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="footer-title">Términos</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Términos y condiciones</a></li>
+                    <li><a href="#">Política de privacidad</a></li>
+                    <li><a href="#">Envíos y devoluciones</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="footer-title">Soporte</h3>
+                <ul class="footer-links">
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                    <li><a href="#">Garantía</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-row">
+                <span>© <span id="year"></span> Miecommerce. Todos los derechos reservados.</span>
+                <span class="footer-note">Este sitio es una demo (no procesa pagos).</span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
